@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:iconly/iconly.dart';
+import 'package:icons_plus/icons_plus.dart';
 import 'package:shantika_pkl/pages/chat_page.dart';
 import 'package:shantika_pkl/pages/home_page.dart';
 import 'package:shantika_pkl/pages/order_page.dart';
@@ -34,6 +35,8 @@ class MainNavigation extends StatelessWidget {
         type: BottomNavigationBarType.fixed,
         selectedItemColor: AppStyle.primary2,
         unselectedItemColor: AppStyle.black200,
+        selectedLabelStyle: AppStyle.paragraph1(color: AppStyle.primary2),
+        unselectedLabelStyle: AppStyle.paragraph1(color: AppStyle.black200),
         items: [
           BottomNavigationBarItem(
             icon: Icon(IconlyLight.home),
@@ -47,8 +50,8 @@ class MainNavigation extends StatelessWidget {
             label: 'Chat',
           ),
           BottomNavigationBarItem(
-            icon: Icon(IconlyLight.message),
-            activeIcon: Icon(IconlyBold.message),
+            icon: Icon(Bootstrap.ticket_perforated),
+            activeIcon: Icon(Bootstrap.ticket_perforated_fill),
             label: 'Pesan',
           ),
           BottomNavigationBarItem(
