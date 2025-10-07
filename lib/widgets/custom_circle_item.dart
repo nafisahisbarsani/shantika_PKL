@@ -32,8 +32,8 @@ class CustomCircleItem extends StatelessWidget {
               shape: BoxShape.circle,
               gradient: LinearGradient(
                 colors: [
-                  AppStyle.background,
-                  AppStyle.primary2,
+                  Color(0xFF292861),
+                  Color(0xFF67717A),
                 ],
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,

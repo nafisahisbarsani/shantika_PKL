@@ -40,7 +40,7 @@ class MainNavigation extends StatelessWidget {
         items: [
           BottomNavigationBarItem(
             icon: Icon(IconlyLight.home),
-            activeIcon: Icon(IconlyBold.home
+            activeIcon: Icon(IconlyBold.home,
             ),
             label: 'Beranda',
           ),
