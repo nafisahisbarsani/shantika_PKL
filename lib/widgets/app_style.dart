@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 class AppStyle {
   //black shades
   static const Color black500 = Color(0xFF000000);
-  static const Color black400 = Color(0xFF797979);
+  static const Color black400 = Color(0xFF4B5563);
   static const Color black300 = Color(0xFFBCBCBC);
   static const Color black200 = Color(0xFFE8E8E8);
   static const Color black100 = Color(0xFFF3F3F3);
@@ -20,6 +20,7 @@ class AppStyle {
 
   //additional color
   static const Color background = Color(0xFFFFFFFF);
+  static const Color rate = Color(0xFFF8BA2C);
 
   //padding & margin
   static const double paddingXS = 4.0;
@@ -53,7 +54,7 @@ class AppStyle {
   static const double spaceXXXXL = 70.0;
 
   //Icon Sizes
-  static const double iconS = 15.0;
+  static const double iconS = 16.0;
   static const double iconM = 20.0;
   static const double iconL = 24.0;
   static const double iconXL = 30.0;
@@ -69,7 +70,7 @@ class AppStyle {
 
   static TextStyle heading2({required Color color}) => GoogleFonts.poppins(
     fontSize: 16,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w600,
     color: color,
   );
 
@@ -102,6 +103,11 @@ class AppStyle {
     fontWeight: FontWeight.bold,
     color: color,
   );
+  static TextStyle caption3({required Color color}) => GoogleFonts.poppins(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: color,
+  );
 
   static TextStyle paragraph1({required Color color}) => GoogleFonts.poppins(
     fontSize: 12,
@@ -112,6 +118,26 @@ class AppStyle {
   static TextStyle paragraph2({required Color color}) => GoogleFonts.poppins(
     fontSize: 12,
     fontWeight: FontWeight.bold,
+    color: color,
+  );
+  static TextStyle paragraph3({required Color color}) => GoogleFonts.poppins(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: color,
+  );
+  static TextStyle menu1({required Color color}) => GoogleFonts.poppins(
+    fontSize: 10,
+    fontWeight: FontWeight.normal,
+    color: color,
+  );
+  static TextStyle menu2({required Color color}) => GoogleFonts.poppins(
+    fontSize: 10,
+    fontWeight: FontWeight.w500,
+    color: color,
+  );
+  static TextStyle divider({required Color color}) => GoogleFonts.poppins(
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
     color: color,
   );
 }

@@ -6,7 +6,6 @@ class CustomCircleItem extends StatelessWidget {
   final IconData icon;
   final String label;
   final VoidCallback? onTap;
-  final Color backgroundColor;
   final Color iconColor;
   final double size;
 
@@ -15,8 +14,7 @@ class CustomCircleItem extends StatelessWidget {
     required this.icon,
     required this.label,
     this.onTap,
-    this.backgroundColor = AppStyle.primary2,
-    this.iconColor =AppStyle.background,
+    this.iconColor = AppStyle.background,
     this.size = AppStyle.iconXXXL,
   });
 
@@ -30,9 +28,16 @@ class CustomCircleItem extends StatelessWidget {
           Container(
             width: size,
             height: size,
-            decoration: BoxDecoration(
-              color: backgroundColor,
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
+              gradient: LinearGradient(
+                colors: [
+                  AppStyle.background,
+                  AppStyle.primary2,
+                ],
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+              ),
             ),
             child: Icon(icon, color: iconColor, size: AppStyle.iconL),
           ),
@@ -42,7 +47,7 @@ class CustomCircleItem extends StatelessWidget {
             child: Text(
               label,
               textAlign: TextAlign.center,
-              style: AppStyle.paragraph1(color: AppStyle.black500),
+              style: AppStyle.menu1(color: AppStyle.black500),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),

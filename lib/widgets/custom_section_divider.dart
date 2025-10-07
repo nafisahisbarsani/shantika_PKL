@@ -33,7 +33,7 @@ class CustomSectionDivider extends StatelessWidget {
           // Text
           Text(
             text,
-            style: AppStyle.heading2(color: AppStyle.black500),
+            style: AppStyle.divider(color: AppStyle.black500),
           ),
         ],
       ),
