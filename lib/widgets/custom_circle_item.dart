@@ -17,7 +17,7 @@ class CustomCircleItem extends StatelessWidget {
     this.onTap,
     this.backgroundColor = AppStyle.primary2,
     this.iconColor =AppStyle.background,
-    this.size = 48,
+    this.size = AppStyle.iconXXXL,
   });
 
   @override

@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class AppStyle {
@@ -12,6 +13,9 @@ class AppStyle {
 
   //primary color
   static const Color primary1 = Color(0xFF0C44FF);
+  static const Color primary5 = Color(0xFF3D46A9);
+  static const Color primary4 = Color(0xFF323994);
+  static const Color primary3 = Color(0xFF2A3088);
   static const Color primary2 = Color(0xFF292860);
 
   //additional color
@@ -57,58 +61,58 @@ class AppStyle {
   static const double iconXXXL = 50.0;
 
     //Text
-    static TextStyle heading1({required Color color}) => TextStyle(
-      fontSize: 20,
-      fontFamily: 'Poppins',
-      fontWeight: FontWeight.bold,
-      color: color,
-    );
-    static TextStyle heading2({required Color color}) => TextStyle(
-      fontSize: 16,
-      fontFamily: 'Poppins',
-      fontWeight: FontWeight.bold,
-      color: color,
-    );
-    static TextStyle heading3({required Color color}) => TextStyle(
-      fontSize: 16,
-      fontFamily: 'Poppins',
-      fontWeight: FontWeight.normal,
-      color: color,
-    );
-    static TextStyle heading4({required Color color}) => TextStyle(
-      fontSize: 18,
-      fontFamily: 'Poppins',
-      fontWeight: FontWeight.normal,
-      color: color,
-    );
-    static TextStyle heading5({required Color color}) => TextStyle(
-      fontSize: 18,
-      fontFamily: 'Poppins',
-      fontWeight: FontWeight.bold,
-      color: color,
-    );
-    static TextStyle caption1({required Color color}) => TextStyle(
-      fontSize: 14,
-      fontFamily: 'Poppins',
-      fontWeight: FontWeight.w300,
-      color: color,
-    );
-    static TextStyle caption2({required Color color}) => TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.bold,
-      fontFamily: 'Poppins',
-      color: color,
-    );
-    static TextStyle paragraph1({required Color color}) => TextStyle(
-      fontSize: 12,
-      fontFamily: 'Poppins',
-      fontWeight: FontWeight.w300,
-      color: color,
-    );
-    static TextStyle paragraph2({required Color color}) => TextStyle(
-      fontSize: 12,
-      fontFamily: 'Poppins',
-      fontWeight: FontWeight.bold,
-      color: color,
-    );
+  static TextStyle heading1({required Color color}) => GoogleFonts.poppins(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: color,
+  );
+
+  static TextStyle heading2({required Color color}) => GoogleFonts.poppins(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: color,
+  );
+
+  static TextStyle heading3({required Color color}) => GoogleFonts.poppins(
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+    color: color,
+  );
+
+  static TextStyle heading4({required Color color}) => GoogleFonts.poppins(
+    fontSize: 18,
+    fontWeight: FontWeight.normal,
+    color: color,
+  );
+
+  static TextStyle heading5({required Color color}) => GoogleFonts.poppins(
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: color,
+  );
+
+  static TextStyle caption1({required Color color}) => GoogleFonts.poppins(
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+    color: color,
+  );
+
+  static TextStyle caption2({required Color color}) => GoogleFonts.poppins(
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    color: color,
+  );
+
+  static TextStyle paragraph1({required Color color}) => GoogleFonts.poppins(
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: color,
+  );
+
+  static TextStyle paragraph2({required Color color}) => GoogleFonts.poppins(
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+    color: color,
+  );
 }
+
