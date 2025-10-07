@@ -40,9 +40,10 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  SizedBox(height: AppStyle.spaceXL),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(width: AppStyle.spaceXXL),
                       Image.asset(
                         'assets/images/logo_shantika.png',
                         height: 42,
@@ -226,7 +227,7 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: AppStyle.spaceL),
-                  CustomCardContainer(
+                  CustomCardContainer (
                     width: 340,
                     borderRadius: AppStyle.radiusL,
                     gradient: RadialGradient(
@@ -292,7 +293,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(AppStyle.paddingXL),
                         child: Text(
                           "Lihat Semua",
-                          style: AppStyle.caption2(color: AppStyle.primary1),
+                          style: AppStyle.caption3(color: AppStyle.primary1),
                         ),
                       ),
                     ],
@@ -318,7 +319,7 @@ class HomePage extends StatelessWidget {
                                 CustomButton(
                                   text: "Beri Review",
                                   onPressed: () {},
-                                  width: 88,
+                                  width: 90,
                                   height: 35,
                                   fontSize: 10,
                                   fontWeight: FontWeight.w600,
@@ -421,7 +422,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(AppStyle.paddingXL),
                         child: Text(
                           "Lihat Semua",
-                          style: AppStyle.caption2(color: AppStyle.primary1),
+                          style: AppStyle.caption3(color: AppStyle.primary1),
                         ),
                       ),
                     ],
@@ -459,7 +460,6 @@ class HomePage extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              // Content
                               Padding(
                                 padding: EdgeInsets.all(AppStyle.paddingM),
                                 child: Column(
@@ -473,27 +473,45 @@ class HomePage extends StatelessWidget {
                                     ),
                                     SizedBox(height: AppStyle.spaceXXS),
                                     Row(
+                                      crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
-                                        Text(
-                                          "Potongan hingga Rp50.000",
-                                          style: AppStyle.paragraph1(
-                                            color: AppStyle.primary1,
+                                        Expanded(
+                                          child: Text(
+                                            "Potongan hingga Rp50.000",
+                                            style: AppStyle.paragraph1(
+                                              color: AppStyle.primary1,
+                                            ),
+                                            overflow: TextOverflow.ellipsis,
                                           ),
                                         ),
-                                        SizedBox(width: AppStyle.spaceL),
-                                        Icon(
-                                          IconlyLight.calendar,
-                                          size: AppStyle.iconM,
-                                          color: AppStyle.black400,
-                                        ),
-                                        Text(
-                                          "28 April 2025",
-                                          style: AppStyle.paragraph1(
-                                            color: AppStyle.black400,
+                                        SizedBox(width: AppStyle.spaceS),
+                                        Flexible(
+                                          fit: FlexFit.loose,
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              Icon(
+                                                IconlyLight.calendar,
+                                                size: AppStyle.iconM,
+                                                color: AppStyle.black400,
+                                              ),
+                                              SizedBox(width: 4),
+                                              Flexible(
+                                                child: Text(
+                                                  "28 April 2025",
+                                                  style: AppStyle.paragraph1(
+                                                    color: AppStyle.black400,
+                                                  ),
+                                                  overflow: TextOverflow.ellipsis,
+                                                  softWrap: false,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ],
                                     ),
+
                                   ],
                                 ),
                               ),
@@ -538,27 +556,45 @@ class HomePage extends StatelessWidget {
                                     ),
                                     SizedBox(height: AppStyle.spaceXXS),
                                     Row(
+                                      crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
-                                        Text(
-                                          "Potongan hingga Rp50.000",
-                                          style: AppStyle.paragraph1(
-                                            color: AppStyle.primary1,
+                                        Expanded(
+                                          child: Text(
+                                            "Potongan hingga Rp50.000",
+                                            style: AppStyle.paragraph1(
+                                              color: AppStyle.primary1,
+                                            ),
+                                            overflow: TextOverflow.ellipsis, // teks promo akan terpotong halus
                                           ),
                                         ),
-                                        SizedBox(width: AppStyle.spaceL),
-                                        Icon(
-                                          IconlyLight.calendar,
-                                          size: AppStyle.iconM,
-                                          color: AppStyle.black400,
-                                        ),
-                                        Text(
-                                          "28 April 2025",
-                                          style: AppStyle.paragraph1(
-                                            color: AppStyle.black400,
+                                        SizedBox(width: AppStyle.spaceS),
+                                        Flexible(
+                                          fit: FlexFit.loose,
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              Icon(
+                                                IconlyLight.calendar,
+                                                size: AppStyle.iconM,
+                                                color: AppStyle.black400,
+                                              ),
+                                              SizedBox(width: 4),
+                                              Flexible(
+                                                child: Text(
+                                                  "28 April 2025",
+                                                  style: AppStyle.paragraph1(
+                                                    color: AppStyle.black400,
+                                                  ),
+                                                  overflow: TextOverflow.ellipsis,
+                                                  softWrap: false,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ],
                                     ),
+
                                   ],
                                 ),
                               ),
@@ -576,7 +612,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(AppStyle.paddingXL),
                         child: Text(
                           "Lihat Semua",
-                          style: AppStyle.caption2(color: AppStyle.primary1),
+                          style: AppStyle.caption3(color: AppStyle.primary1),
                         ),
                       ),
                     ],
@@ -638,7 +674,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(AppStyle.paddingXL),
                         child: Text(
                           "Lihat Semua",
-                          style: AppStyle.caption2(color: AppStyle.primary1),
+                          style: AppStyle.caption3(color: AppStyle.primary1),
                         ),
                       ),
                     ],
