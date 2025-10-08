@@ -27,8 +27,8 @@ class NotificationPage extends StatelessWidget {
                   unselectedLabelColor: AppStyle.black300,
                   labelStyle: AppStyle.caption1(color: AppStyle.primary1),
                   tabs: const [
-                    Tab(text: "Semua"),
-                    Tab(text: "Belum Dibaca"),
+                    Tab(text: "Semua 16"),
+                    Tab(text: "Belum Dibaca 7"),
                   ],
                 ),
               ),
