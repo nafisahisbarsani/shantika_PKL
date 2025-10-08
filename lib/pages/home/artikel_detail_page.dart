@@ -194,9 +194,15 @@ Widget _buildListArtikel() {
               "Baca Artikel Lainnya",
               style: AppStyle.caption3(color: AppStyle.black500),
             ),
-            Text(
-              "Selengkapnya",
-              style: AppStyle.caption3(color: AppStyle.danger),
+            Row(
+              children: [
+                Text(
+                  "Selengkapnya",
+                  style: AppStyle.caption3(color: AppStyle.danger),
+                ),
+                SizedBox(width: AppStyle.spaceXS,),
+                Icon(Icons.arrow_forward, size: AppStyle.iconS, color: AppStyle.danger,)
+              ],
             ),
           ],
         ),
