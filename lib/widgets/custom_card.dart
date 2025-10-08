@@ -14,6 +14,7 @@ class CustomCardContainer extends StatelessWidget {
   final double? height;
   final Color? borderColor;
   final double? borderWidth;
+  final VoidCallback? onTap;
 
   const CustomCardContainer({
     super.key,
@@ -29,11 +30,12 @@ class CustomCardContainer extends StatelessWidget {
     this.height,
     this.borderColor,
     this.borderWidth = 1.0,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    final container = Container(
       width: width,
       height: height,
       margin: margin,
@@ -44,13 +46,11 @@ class CustomCardContainer extends StatelessWidget {
             : null,
         gradient: gradient,
         borderRadius: BorderRadius.circular(borderRadius),
-        border:
-            border ??
+        border: border ??
             (borderColor != null
                 ? Border.all(color: borderColor!, width: borderWidth!)
                 : null),
-        boxShadow:
-            boxShadow ??
+        boxShadow: boxShadow ??
             [
               BoxShadow(
                 color: AppStyle.black200.withOpacity(0.3),
@@ -61,5 +61,13 @@ class CustomCardContainer extends StatelessWidget {
       ),
       child: child,
     );
+
+    return onTap != null
+        ? GestureDetector(
+      onTap: onTap,
+      behavior: HitTestBehavior.translucent,
+      child: container,
+    )
+        : container;
   }
 }

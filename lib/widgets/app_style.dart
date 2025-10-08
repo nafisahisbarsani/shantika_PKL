@@ -2,7 +2,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class AppStyle {
   //black shades
   static const Color black500 = Color(0xFF000000);
@@ -21,6 +20,8 @@ class AppStyle {
   //additional color
   static const Color background = Color(0xFFFFFFFF);
   static const Color rate = Color(0xFFF8BA2C);
+  static const Color danger = Color(0xFFFF3800);
+  static const Color text = Color(0xFF6B7280);
 
   //padding & margin
   static const double paddingXS = 4.0;
@@ -61,10 +62,10 @@ class AppStyle {
   static const double iconXXL = 35.0;
   static const double iconXXXL = 50.0;
 
-    //Text
+  //Text
   static TextStyle heading1({required Color color}) => GoogleFonts.poppins(
     fontSize: 20,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w500,
     color: color,
   );
 
@@ -141,4 +142,3 @@ class AppStyle {
     color: color,
   );
 }
-

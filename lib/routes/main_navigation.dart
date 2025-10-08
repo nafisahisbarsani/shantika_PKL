@@ -6,11 +6,12 @@ import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:iconly/iconly.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:shantika_pkl/pages/chat_page.dart';
-import 'package:shantika_pkl/pages/home_page.dart';
+import 'package:shantika_pkl/pages/home/home_page.dart';
 import 'package:shantika_pkl/pages/order_page.dart';
 import 'package:shantika_pkl/pages/profile_page.dart';
 import 'package:shantika_pkl/widgets/app_style.dart';
-import '../conotroller/nav_controller.dart';
+
+import '../controller/nav_controller.dart';
 
 class MainNavigation extends StatelessWidget {
   const MainNavigation({super.key});

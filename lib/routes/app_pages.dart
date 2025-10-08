@@ -1,6 +1,6 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../pages/chat_page.dart';
-import '../pages/home_page.dart';
+import '../pages/home/home_page.dart';
 import '../pages/order_page.dart';
 import '../pages/profile_page.dart';
 
