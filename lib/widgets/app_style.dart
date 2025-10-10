@@ -26,6 +26,9 @@ class AppStyle {
   static const Color text = Color(0xFF6B7280);
   static const Color facebook = Color(0xFF395185);
   static const Color seat = Color(0xFFCCE9FF);
+  static const Color list = Color(0xFFF2F5FD);
+  static const Color button = Color(0xFFFF3800);
+  static const Color faq = Color(0xFFF5FBFF);
 
 
   //padding & margin
@@ -70,7 +73,7 @@ class AppStyle {
   //Text
   static TextStyle heading1({required Color color}) => GoogleFonts.poppins(
     fontSize: 20,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.normal,
     color: color,
   );
 
@@ -150,6 +153,11 @@ class AppStyle {
   static TextStyle divider({required Color color}) => GoogleFonts.poppins(
     fontSize: 14,
     fontWeight: FontWeight.w600,
+    color: color,
+  );
+  static TextStyle display({required Color color}) => GoogleFonts.poppins(
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
     color: color,
   );
 }
