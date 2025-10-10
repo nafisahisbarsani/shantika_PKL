@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shantika_pkl/widgets/app_style.dart';
-
+import 'package:shantika_pkl/widgets/custom_text_field.dart';
 import '../../widgets/custom_arrow.dart';
+import '../../widgets/custom_button.dart';
 
 class PersonalInfo extends StatelessWidget {
   const PersonalInfo({super.key});
@@ -13,15 +15,7 @@ class PersonalInfo extends StatelessWidget {
       body: SingleChildScrollView(
         padding: EdgeInsets.all(AppStyle.paddingL),
         child: Column(
-          children: [
-            _buildHeader(),
-            SizedBox(height: AppStyle.spaceM),
-            _buildProfileHeader(),
-            SizedBox(height: AppStyle.spaceM),
-            _buildInfoCard(),
-            SizedBox(height: AppStyle.spaceL),
-            _buildSaveButton(),
-          ],
+          children: [_buildHeader(), _buildProfileHeader(), _buildInput(),_buildButton()],
         ),
       ),
     );
@@ -39,164 +33,248 @@ class PersonalInfo extends StatelessWidget {
           ),
         ],
       ),
-      child: CustomArrow(title: "Tentang Kami"),
+      child: CustomArrow(title: "Informasi Pribadi"),
     );
   }
 
   Widget _buildProfileHeader() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        CircleAvatar(
-          radius: 35,
-          backgroundImage: AssetImage("assets/images/profile_sample.png"),
-        ),
-        SizedBox(height: AppStyle.spaceS),
-        Text(
-          "Anastasya Carolina",
-          style: AppStyle.paragraph2(color: AppStyle.black300),
-        ),
-        Text(
-          "Member New Shantika",
-          style: AppStyle.caption3(color: AppStyle.black400),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildInfoCard() {
-    return Container(
-      decoration: BoxDecoration(
-        color: AppStyle.background,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.05),
-            blurRadius: 4,
-            offset: const Offset(0, 2),
-          ),
-        ],
+    return Padding(
+      padding: EdgeInsets.only(
+        top: AppStyle.paddingL,
+        bottom: AppStyle.paddingL,
+        left: AppStyle.paddingXL,
+        right: AppStyle.paddingXL,
       ),
-      padding: EdgeInsets.all(AppStyle.paddingL),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          _buildTextField("Nama Lengkap", "Anastasya Carolina"),
-          _buildTextField("Nomor Telepon", "083745552724"),
-          _buildTextField("Email", "anastasya.carolina@gmail.com"),
-          Row(
+          Stack(
             children: [
-              Expanded(child: _buildTextField("Tempat Lahir", "Semarang")),
-              SizedBox(width: AppStyle.spaceM),
-              Expanded(
-                child: _buildTextField("Tanggal Lahir", "03 Oktober 2006"),
+              CircleAvatar(
+                radius: AppStyle.radiusXXXL,
+                backgroundColor: AppStyle.black300,
+                child: Icon(
+                  Icons.person,
+                  size: AppStyle.iconXXL,
+                  color: AppStyle.background,
+                ),
               ),
             ],
           ),
-          SizedBox(height: AppStyle.spaceM),
-          _buildGenderSection(),
-          SizedBox(height: AppStyle.spaceM),
-          _buildTextField(
-            "Alamat Lengkap",
-            "Jl Sentiyaki Raya No 48, Semarang Utara",
-            maxLines: 3,
+          SizedBox(width: 24),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Anastasya Carolina",
+                style: AppStyle.heading1(color: AppStyle.black500),
+              ),
+              SizedBox(height: AppStyle.spaceS),
+              Row(
+                children: [
+                  Text(
+                    "Member New Shantika",
+                    style: AppStyle.caption1(color: AppStyle.text),
+                  ),
+                  SizedBox(width: 4),
+                  Icon(Icons.check_circle, size: 14, color: AppStyle.text),
+                ],
+              ),
+            ],
           ),
         ],
       ),
     );
   }
 
-  Widget _buildGenderSection() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text("Gender", style: AppStyle.paragraph3(color: AppStyle.black500)),
-        SizedBox(height: AppStyle.spaceS),
-        Row(
-          children: [
-            _buildGenderButton("Pria", false),
-            SizedBox(width: AppStyle.spaceS),
-            _buildGenderButton("Wanita", true),
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget _buildGenderButton(String text, bool isSelected) {
-    return Expanded(
-      child: Container(
-        height: 40,
-        decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFF3B3561) : const Color(0xFFF3F3F3),
-          borderRadius: BorderRadius.circular(30),
-        ),
-        child: Center(
-          child: Text(
-            text,
-            style: TextStyle(
-              color: isSelected ? Colors.white : Colors.black54,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildTextField(String label, String hint, {int maxLines = 1}) {
+  Widget _buildInput() {
     return Padding(
-      padding: EdgeInsets.only(bottom: AppStyle.spaceM),
+      padding: EdgeInsets.only(
+        top: AppStyle.paddingXL,
+        left: AppStyle.paddingXL,
+        right: AppStyle.paddingXL,
+        bottom: AppStyle.paddingL,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(label, style: AppStyle.paragraph3(color: AppStyle.black500)),
-          SizedBox(height: AppStyle.spaceS),
-          TextField(
-            maxLines: maxLines,
-            decoration: InputDecoration(
-              hintText: hint,
-              hintStyle: AppStyle.caption1(color: AppStyle.black300),
-              filled: true,
-              fillColor: Colors.white,
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 12,
-                vertical: 10,
+          CustomTextField(
+            isObsecure: false,
+            title: "Nama Lengkap",
+            hintText: "Anastasya Carolina",
+            width: 348,
+            height: 36,
+          ),
+          SizedBox(height: 16),
+          CustomTextField(
+            isObsecure: false,
+            title: "Nomor Telepon",
+            hintText: "083745552724",
+            width: 348,
+            height: 36,
+          ),
+          SizedBox(height: 16),
+          CustomTextField(
+            isObsecure: false,
+            title: "Email",
+            hintText: "anastasyacarolina@gmail.com",
+            width: 348,
+            height: 36,
+          ),
+          SizedBox(height: 16),
+          Row(
+            children: [
+              CustomTextField(
+                isObsecure: false,
+                title: "Tempat Lahir",
+                hintText: "Semarang",
+                width: 137,
+                height: 36,
               ),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-                borderSide: const BorderSide(
-                  color: Color(0xFFE6E6E6),
-                  width: 1,
-                ),
+              SizedBox(width: 12),
+              CustomTextField(
+                isObsecure: false,
+                title: "Tempat Lahir",
+                hintText: "03 Oktober 2006",
+                width: 137,
+                height: 36,
               ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-                borderSide: const BorderSide(
-                  color: Color(0xFFE6E6E6),
-                  width: 1,
-                ),
-              ),
-            ),
+            ],
+          ),
+          SizedBox(height: 16),
+          _buildGender(),
+          SizedBox(height: 16),
+          CustomTextField(
+            isObsecure: false,
+            title: "Alamat Lengkap",
+            hintText: "Jl Sentiyaki Raya No 48, Semarang Utara",
+            width: 348,
+            height: 104,
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildSaveButton() {
-    return SizedBox(
-      width: double.infinity,
-      height: 46,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: const Color(0xFFB7BAC3),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-          elevation: 0,
-        ),
-        onPressed: () {},
-        child: const Text("Simpan", style: TextStyle(color: Colors.white)),
       ),
     );
   }
 }
+
+Widget _buildGender() {
+  return Container(
+    width: 372,
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Gender',
+          style: GoogleFonts.poppins(
+            color: const Color(0xFF111827),
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+            height: 1.43,
+          ),
+        ),
+        const SizedBox(height: 6),
+        Container(
+          width: double.infinity,
+          height: 48,
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          clipBehavior: Clip.antiAlias,
+          decoration: ShapeDecoration(
+            color: Colors.white,
+            shape: RoundedRectangleBorder(
+              side: const BorderSide(
+                width: 1,
+                color: Color(0x1E030712),
+              ),
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  _buildGenderOption('Pria', 'male'),
+                  const SizedBox(width: 32),
+                  _buildGenderOption('Wanita', 'female'),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget _buildGenderOption(String label, String value) {
+  return GestureDetector(
+    onTap: () {
+      // Handle gender selection here
+      print('Selected: $value');
+    },
+    child: Row(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Container(
+          width: 20,
+          height: 20,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(
+              color: const Color(0xFFD1D5DB),
+              width: 2,
+            ),
+          ),
+          child: Container(
+            margin: const EdgeInsets.all(2),
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.transparent,
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Text(
+          label,
+          style: GoogleFonts.poppins(
+            color: const Color(0xFF6B7280),
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+            height: 1.50,
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget _buildButton() {
+  return Padding(
+    padding: EdgeInsets.only(
+      top: AppStyle.paddingM,
+      left: AppStyle.paddingXL,
+      right: AppStyle.paddingXL,
+    ),
+    child: Center(
+      child: CustomButton(
+        text: "Simpan",
+        onPressed: (){},
+        color: AppStyle.primary2,
+        width: 372,
+        fontSize: 16,
+        height: 48,
+      ),
+    ),
+  );
+}
+

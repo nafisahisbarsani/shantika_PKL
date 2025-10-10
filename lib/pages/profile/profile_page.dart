@@ -113,6 +113,7 @@ Widget _buildListProfile() {
       'icon': "assets/images/fav.svg",
       'title': "Beri Nilai App Kami",
       'route': '/rating',
+      'additionalText': "Versi 1.20.5",
     },
   ];
 
@@ -151,6 +152,13 @@ Widget _buildListProfile() {
                   style: AppStyle.caption1(color: AppStyle.black500),
                 ),
               ),
+              if (item['additionalText'] != null) ...[
+                Text(
+                  item['additionalText'],
+                  style: AppStyle.menu2(color: AppStyle.black400),
+                ),
+                SizedBox(width: AppStyle.paddingS),
+              ],
               SvgPicture.asset(
                 "assets/images/arrow.svg",
                 color: AppStyle.black500,
@@ -162,7 +170,6 @@ Widget _buildListProfile() {
     },
   );
 }
-
 Widget _buildButton() {
   return Padding(
     padding: EdgeInsets.only(
