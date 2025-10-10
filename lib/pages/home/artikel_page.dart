@@ -21,7 +21,7 @@ class ArtikelPage extends StatelessWidget {
           children: [
             CustomArrow(title: "Artikel"),
             _buildSearchBar(),
-            _buildListArtikel()
+            _buildListArtikel(),
           ],
         ),
       ),
@@ -31,14 +31,20 @@ class ArtikelPage extends StatelessWidget {
 
 Widget _buildSearchBar() {
   return Padding(
-    padding: const EdgeInsets.only(left: AppStyle.paddingXL, right: AppStyle.paddingXL, top: AppStyle.paddingM),
+    padding: const EdgeInsets.only(
+      left: AppStyle.paddingXL,
+      right: AppStyle.paddingXL,
+      top: AppStyle.paddingM,
+    ),
     child: CustomTextField(
+      width: double.infinity,
       isObsecure: false,
       labelText: "Cari",
       suffixIcon: Icon(Bootstrap.search, size: AppStyle.iconM),
     ),
   );
 }
+
 Widget _buildListArtikel() {
   final List<Map<String, String>> artikelList = [
     {

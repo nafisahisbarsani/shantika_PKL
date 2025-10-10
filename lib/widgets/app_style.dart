@@ -16,12 +16,17 @@ class AppStyle {
   static const Color primary4 = Color(0xFF323994);
   static const Color primary3 = Color(0xFF2A3088);
   static const Color primary2 = Color(0xFF292860);
+  static const Color primary6 = Color(0xFF4176E3);
 
   //additional color
   static const Color background = Color(0xFFFFFFFF);
   static const Color rate = Color(0xFFF8BA2C);
   static const Color danger = Color(0xFFFF3800);
+  static const Color success = Color(0xFF8FC907);
   static const Color text = Color(0xFF6B7280);
+  static const Color facebook = Color(0xFF395185);
+  static const Color seat = Color(0xFFCCE9FF);
+
 
   //padding & margin
   static const double paddingXS = 4.0;
@@ -64,6 +69,12 @@ class AppStyle {
 
   //Text
   static TextStyle heading1({required Color color}) => GoogleFonts.poppins(
+    fontSize: 20,
+    fontWeight: FontWeight.w500,
+    color: color,
+  );
+
+  static TextStyle heading6({required Color color}) => GoogleFonts.poppins(
     fontSize: 20,
     fontWeight: FontWeight.w500,
     color: color,
