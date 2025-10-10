@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:iconly/iconly.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:shantika_pkl/widgets/app_style.dart';
 import 'package:shantika_pkl/widgets/custom_arrow.dart';

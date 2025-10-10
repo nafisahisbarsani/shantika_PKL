@@ -94,6 +94,17 @@ flutter:
     - assets/images/profile.svg
     - assets/images/profile_active.svg
     - assets/images/telepon.svg
+    - assets/images/arrow.svg
+    - assets/images/faq.svg
+    - assets/images/fav.svg
+    - assets/images/info.svg
+    - assets/images/list.svg
+    - assets/images/notif.svg
+    - assets/images/policy.svg
+    - assets/images/insta.svg
+    - assets/images/mail.svg
+    - assets/images/fb.svg
+    - assets/images/travel.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
