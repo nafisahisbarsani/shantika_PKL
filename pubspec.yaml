@@ -39,6 +39,7 @@ dependencies:
   iconly: ^1.0.1
   google_fonts: ^6.3.2
   icons_plus: ^5.0.0
+  flutter_svg: ^2.2.1
 
 dev_dependencies:
   flutter_test:
@@ -79,6 +80,21 @@ flutter:
     - assets/images/artikel_detail3.jpg
     - assets/images/artikel_detail4.jpg
     - assets/images/doctor.png
+    - assets/images/chat.svg
+    - assets/images/facebook.svg
+    - assets/images/whatsapp.svg
+    - assets/images/bus.svg
+    - assets/images/seat.svg
+    - assets/images/chat.svg
+    - assets/images/chat_active.svg
+    - assets/images/home.svg
+    - assets/images/home_active.svg
+    - assets/images/ticket.svg
+    - assets/images/ticket_active.svg
+    - assets/images/profile.svg
+    - assets/images/profile_active.svg
+    - assets/images/telepon.svg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

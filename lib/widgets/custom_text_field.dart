@@ -13,7 +13,7 @@ class CustomTextField extends StatelessWidget {
   final bool readOnly;
   final VoidCallback? onTap;
   final InputDecoration? decoration;
-  final double width;
+  final double? width;
   final double height;
   final ValueChanged<String>? onChanged;
   final String? Function(String?)? validator;
@@ -30,7 +30,7 @@ class CustomTextField extends StatelessWidget {
     this.readOnly = false,
     this.onTap,
     this.decoration,
-    this.width = 308,
+    this.width,
     this.height = 48,
     this.onChanged,
     this.validator,

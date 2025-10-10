@@ -409,7 +409,7 @@ class HomePage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Gejayan – Sieman",
+                                    "Gejayan – Sleman",
                                     style: AppStyle.paragraph3(
                                       color: AppStyle.black500,
                                     ),

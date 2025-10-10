@@ -5,12 +5,12 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:iconly/iconly.dart';
 import 'package:icons_plus/icons_plus.dart';
-import 'package:shantika_pkl/pages/chat_page.dart';
+import 'package:shantika_pkl/pages/chat/chat_page.dart';
 import 'package:shantika_pkl/pages/home/home_page.dart';
-import 'package:shantika_pkl/pages/order_page.dart';
-import 'package:shantika_pkl/pages/profile_page.dart';
+import 'package:shantika_pkl/pages/pesan/pesan_page.dart';
+import 'package:shantika_pkl/pages/profile/profile_page.dart';
 import 'package:shantika_pkl/widgets/app_style.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 import '../controller/nav_controller.dart';
 
 class MainNavigation extends StatelessWidget {
@@ -23,7 +23,7 @@ class MainNavigation extends StatelessWidget {
     final List<Widget> pages = const [
       HomePage(),
       ChatPage(),
-      OrderPage(),
+      PesanPage(),
       ProfilePage(),
     ];
 
@@ -40,28 +40,52 @@ class MainNavigation extends StatelessWidget {
         unselectedLabelStyle: AppStyle.paragraph1(color: AppStyle.black200),
         items: [
           BottomNavigationBarItem(
-            icon: Icon(IconlyLight.home),
-            activeIcon: Icon(IconlyBold.home,
+            icon: SvgPicture.asset(
+              'assets/images/home.svg',
+              colorFilter: ColorFilter.mode(AppStyle.black200, BlendMode.srcIn),
+            ),
+            activeIcon: SvgPicture.asset(
+              'assets/images/home_active.svg',
+              colorFilter: ColorFilter.mode(AppStyle.primary2, BlendMode.srcIn),
             ),
             label: 'Beranda',
           ),
           BottomNavigationBarItem(
-            icon: Icon(IconlyLight.chat),
-            activeIcon: Icon(IconlyBold.chat),
+            icon: SvgPicture.asset(
+              'assets/images/chat.svg',
+              colorFilter: ColorFilter.mode(AppStyle.black200, BlendMode.srcIn),
+            ),
+            activeIcon: SvgPicture.asset(
+              'assets/images/chat_active.svg',
+              colorFilter: ColorFilter.mode(AppStyle.primary2, BlendMode.srcIn),
+            ),
             label: 'Chat',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Bootstrap.ticket_perforated),
-            activeIcon: Icon(Bootstrap.ticket_perforated_fill),
+            icon: SvgPicture.asset(
+              'assets/images/ticket.svg',
+              colorFilter: ColorFilter.mode(AppStyle.black200, BlendMode.srcIn),
+            ),
+            activeIcon: SvgPicture.asset(
+              'assets/images/ticket_active.svg',
+              colorFilter: ColorFilter.mode(AppStyle.primary2, BlendMode.srcIn),
+            ),
             label: 'Pesan',
           ),
           BottomNavigationBarItem(
-            icon: Icon(IconlyLight.profile),
-            activeIcon: Icon(IconlyBold.profile),
+            icon: SvgPicture.asset(
+              'assets/images/profile.svg',
+              colorFilter: ColorFilter.mode(AppStyle.black200, BlendMode.srcIn),
+            ),
+            activeIcon: SvgPicture.asset(
+              'assets/images/profile_active.svg',
+              colorFilter: ColorFilter.mode(AppStyle.primary2, BlendMode.srcIn),
+            ),
             label: 'Profil',
           ),
         ],
       ),
+
     ));
   }
 }
